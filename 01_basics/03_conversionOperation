@@ -1,0 +1,33 @@
+// let score="33abc"
+
+// console.log(typeof score);
+// console.log(typeof (score));
+
+// let valueInNumber=Number(score);
+// console.log(typeof valueInNumber);
+// console.log(valueInNumber);
+ 
+
+
+// "33" => 33
+// "33ab"=>NaN
+// true =>1
+// false => 0
+
+// let isLoggedIn=1;
+// let booleanIsloggedIn=Boolean(isLoggedIn);
+// console.log(booleanIsloggedIn);
+
+// ************OPERATION*************
+
+// console.log(2+3);
+// console.log(2-3);
+// console.log(2*3);
+// console.log(2/3);
+
+console.log(typeof("2"+3)); // string
+console.log(2+"3");
+console.log("1"+3+2);
+console.log(2+3+"4");
+
+
