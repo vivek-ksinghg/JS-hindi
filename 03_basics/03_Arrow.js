@@ -48,7 +48,7 @@ const user={
 
     arrowFunction(4,2);
 
-    let arrowFunction= (num1,num2)=>{
+    let arrowFunction1= (num1,num2)=>{
         console.log(num1+num2);
    }
 
