@@ -24,7 +24,6 @@ switch(day)
        default:
         console.log("out day") ;
         break;
-                    
-            
+                              
         
 }
