@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container{
+    height: 500px;
+    width: 400px;
+    background-color: grey;
+    border-radius: 2px;
+  
+}
+
+#weight-guide{
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+#results{
+  
+   margin-left: 100px;
+   margin-top: 30px;
+   font-size: 40px;  
+}
+p,h3{
+    margin-left:40px;
+}
+h1{
+    margin-left: 80px;
+}
+
+button{
+    margin-top: 20px;
+    margin-left: 120px;
+    font-size: large;
+    border: 2px;
+ 
+
+}
