@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set time out</title>
+</head>
+<body>
+    <h1>code while sleep</h1>
+    <button id="stop">stop</button>
+
+</body>
+
+<script>
+ // setTimeout(function(),time) -> template of settime out
+
+// first  method(write function inside the set time out)
+setTimeout(function(){
+    console.log("hero");
+    
+},2000)
+ // method 2
+    const change=function(){
+    console.log("str");   
+}
+setTimeout(change,5000); // this is second method(pass refrence of function) to execute settimeout function
+
+// change the text of h1  after 3 sec
+ const  text=function(){
+    document.querySelector('h1').
+    innerHTML="best student of js"
+    }
+
+   // setTimeout(text,3000)
+
+    // Imp: how to stop the fuction text , you don't want to change the text of h1
+
+    const changeMe=setTimeout(text,3000); // mai ye wala set time hatana chahta hu to iska refrence clear time out me pass karunga
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        // if you cliked STOP button before 3sec then text will not change
+
+        clearTimeout(changeMe); // pass the refrence of which you remove   settimeout 
+        console.log("stoped");
+        
+    })
+</script>
+
+</html>

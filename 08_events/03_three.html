@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time out</title>
+</head>
+<body>
+    <h1>Chai aur charche</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+</body>
+
+<script>
+// method 1
+    // setInterval(() => {
+    //     console.log("ankush",Date.now());
+
+    // }, 1000);
+
+  //  method 2
+
+  const saydate=function(str){
+    console.log(str,Date.now());
+        
+  }
+  let stop;
+
+  // when you click start button then set interval start
+  document.querySelector('#start').addEventListener('click',function(){
+     stop=setInterval(saydate, 1000, "hi");
+})
+ 
+// when you click stop button then set interval stop
+  document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(stop);
+  })
+
+ 
+
+
+</script>
+</html>
