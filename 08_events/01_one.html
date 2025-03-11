@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body  style="background-color: #414141; color: aliceblue;">
+     
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+
+</body>
+
+<script>
+    /*
+      // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+old method
+    */
+
+
+      // attachEvent()
+    // jQuery - on
+
+
+/*
+   // NOTE :READ about  THIS topic
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+*/
+    // NEW method
+
+    // document.getElementById('images').addEventListener('click',function(e){
+      
+    //    //  console.log(e);
+    //    console.log('images are clicked');
+       
+    // },false)
+
+    // third parameter is  false , it is bydefault and it is optional (agar aap chahe to nahi pass kar skte hai), if you want change , it can do(true)
+
+
+    //  document.getElementById('owl').addEventListener('click',function(e){
+      
+    //    //  console.log(e);
+    //    console.log('image of owl are clicked');
+    //    e.stopPropagation(); // this method prevent from bubbling effect
+       
+    // })
+
+    //  document.getElementById('google').addEventListener('click',function(e){
+      
+    //    //  console.log(e);
+    //    console.log('google are clicked');
+    //    e.stopPropagation ();
+    //    e.preventDefault(); // it stop bydefault feature
+       
+    // },false)
+
+// REMOVE THE IMAGES IF YOU CLICK
+
+      document.getElementById('images').addEventListener('click',function(e){
+      
+       //  console.log(e);
+      
+    
+     // console.log(e.target.tagName);
+     if(e.target.tagName==='IMG'){
+       let removeIt=e.target.parentNode;
+       console.log(`image ${e.target.id} is removed`);
+       removeIt.remove();
+}
+     
+     
+       
+    },false)
+
+
+    
+</script>
+
+</html>
