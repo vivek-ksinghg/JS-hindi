@@ -66,3 +66,9 @@ function calculateCartPrice1(val1,val2, ...num1){
 
 
     
+// ********####*******
+
+// HIGHER ORDER FUNCTIO: One function pass as argument in another function  
+
+
+//example of higher order function: function myfun(function())
